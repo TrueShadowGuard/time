@@ -1,0 +1,163 @@
+.clock {
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    width: 60%;
+    aspect-ratio: 1;
+    margin: 100px auto;
+
+    background-color: peachpuff;
+    border: 6px solid #333;
+    border-radius: 50%;
+
+    --number-offset: 8px;
+    --stroke-width: 16px;
+    --seconds: 15;
+    --minutes: 30;
+    --hours: 0;
+}
+
+.clock_number {
+    position: absolute;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.clock_12 {
+    left: 50%;
+    transform: translate(-50%);
+    top: var(--number-offset);
+}
+
+.clock_3 {
+    top: 50%;
+    transform: translate(0, -50%);
+    right: var(--number-offset);
+}
+
+.clock_6 {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: var(--number-offset);
+}
+
+.clock_9 {
+    top: 50%;
+    transform: translate(0, -50%);
+    left: var(--number-offset);
+}
+
+.clock_point {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #999;
+    top: calc(50% + 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock_pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
+    height: 4px;
+}
+
+.clock_second {
+    width: 40%;
+    transform: rotate(calc(var(--seconds) * 360deg / 60 - 90deg));
+    background-color: orchid;
+}
+
+.clock_minute {
+    width: 30%;
+    transform: rotate(calc(var(--minutes) * 360deg / 60 - 90deg));
+    background-color: aqua;
+}
+
+.clock_hour {
+    width: 20%;
+    transform: rotate(calc(var(--hours) * 360deg / 12 - 90deg));
+    background-color: coral;
+}
+
+.clock_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - var(--stroke-width));
+    height: calc(100% - var(--stroke-width));
+
+    background-color: peachpuff;
+    border-radius: 50%;
+}
+
+.clock_stroke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: calc(50% + 3px);
+    width: 4px;
+    background-color: #333;
+    transform-origin: top center;
+}
+
+.clock_stroke-1 {
+    transform: rotate(0deg);
+}
+
+.clock_stroke-2 {
+    transform: rotate(30deg);
+}
+
+.clock_stroke-3 {
+    transform: rotate(60deg);
+}
+
+.clock_stroke-4 {
+    transform: rotate(90deg);
+}
+
+.clock_stroke-5 {
+    transform: rotate(120deg);
+}
+
+.clock_stroke-6 {
+    transform: rotate(150deg);
+}
+
+.clock_stroke-7 {
+    transform: rotate(180deg);
+}
+
+.clock_stroke-8 {
+    transform: rotate(210deg);
+}
+
+.clock_stroke-9 {
+    transform: rotate(240deg);
+}
+
+.clock_stroke-10 {
+    transform: rotate(270deg);
+}
+
+.clock_stroke-11 {
+    transform: rotate(300deg);
+}
+
+.clock_stroke-12 {
+    transform: rotate(330deg);
+}
+
+#time {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+}
